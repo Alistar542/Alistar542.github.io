@@ -154,8 +154,8 @@ body {
               
     #mainNav .navbar-nav > li.nav-item > a.nav-link,
     #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
-                color: rgba(255, 255, 255, 0.7); 
-                
+                /* color: rgba(255, 255, 255, 0.7);  */
+                color: white;
                 }
                 
     #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
@@ -299,17 +299,22 @@ body {
 
   .customer-quote{
       padding-top: 0px;
+      font-size: 200%;
   }
   
 
   @media (max-width: 768px) { 
     .qoute{
         color: white;
-        font-size: 400%;
+        font-size: 600%;
         
         
     }
-
+    .customer-quote{
+        padding-top: 0px;
+        font-size: 150%;
+    }
+    
 }
 
 
