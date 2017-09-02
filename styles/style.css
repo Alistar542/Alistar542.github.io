@@ -90,13 +90,17 @@ body {
 
 #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
         color: #3378EC; 
+        
       }
     
 #mainNav .navbar-toggle {
       font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
-      color: #222222; 
+      color: transparent;
+      background-color: transparent; 
+      
+      border: none;
     }
       
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus,
@@ -105,24 +109,31 @@ body {
         font-weight: 700;
         text-transform: uppercase;
         color: #222222; 
+        
       }
 
    
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover,
 #mainNav .navbar-nav > li.nav-item > a.nav-link:hover {
-          color: white;
+          color:white;
+          
         }
         
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active,
 #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
           color: white !important;
-          background-color: transparent; 
+          background-color: white;
         }
           
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active:hover,
 #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
-            background-color: transparent;
+    background-color: white;
         }
+
+#mainNav.navbar-shrink{
+    border-color: transparent;
+    background-color: white;
+}
     
      
      
@@ -130,7 +141,7 @@ body {
     #mainNav {
               border-color:transparent;
               background-color:transparent;
-              /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);  */
+              
              }
               
     #mainNav .navbar-brand {
@@ -144,6 +155,7 @@ body {
     #mainNav .navbar-nav > li.nav-item > a.nav-link,
     #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
                 color: rgba(255, 255, 255, 0.7); 
+                
                 }
                 
     #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
@@ -154,6 +166,7 @@ body {
     #mainNav.navbar-shrink {
                 border-color: rgba(34, 34, 34, 0.05);
                 background-color: white; 
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
                 }
     #mainNav.navbar-shrink .navbar-brand {
                   font-size: 16px;
@@ -161,16 +174,19 @@ body {
                 }
     #mainNav.navbar-shrink .navbar-brand:focus, #mainNav.navbar-shrink .navbar-brand:hover {
                     color: #3378EC; 
+                    
                 }
 
     #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link,
     #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus {
                       color: #222222; 
+                      
                 }
                 
     #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:hover,
     #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus:hover {
                         color: white; 
+                        
                 } 
                       
 }
