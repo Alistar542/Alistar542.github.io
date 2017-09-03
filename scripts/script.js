@@ -1,19 +1,67 @@
-(function($) {
-    "use strict"; // Start of use strict
-  
-    // Smooth scrolling using jQuery easing
-    $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
-      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        if (target.length) {
-          $('html, body').animate({
-            scrollTop: (target.offset().top - 48)
-          }, 1000, "easeInOutExpo");
-          return false;
-        }
-      }
+$(document).ready(function(){
+    // Activate Carousel
+    $("#my-car").carousel();
+    
+    // Enable Carousel Indicators
+    $(".item1").click(function(){
+        $("#my-car").carousel(0);
     });
+    $(".item2").click(function(){
+        $("#my-car").carousel(1);
+    });
+    $(".item3").click(function(){
+        $("#my-car").carousel(2);
+    });
+   
+    
+    // Enable Carousel Controls
+    $(".left").click(function(){
+        $("#my-car").carousel("prev");
+    });
+    $(".right").click(function(){
+        $("#my-car").carousel("next");
+    });
+});
+
+$(window).scroll(function() {
+    if ($("#mainNav").offset().top > 50) {
+           $('.navbar-default').css({"background-color":"white","transition-duration":"0.2s"});
+           $('#mainNav').css({"color":"#524758"});
+           $('.navbar-default .navbar-brand').css({"color":"#3378EC"});
+           $("#mainNav").addClass("navbar-shrink");
+           $('.navbar-default .navbar-nav > li > a').css({"color":"black"});
+          //  $('.navbar-default .navbar-nav > li > btn:hover').css({"color":"white"})
+    } else {
+           $('.navbar-default').css({"background-color":"transparent","border-color":"transparent"});
+           $('#mainNav').css({"color":"white"});
+           $('.navbar-default .navbar-brand').css({"color":"white"});
+           $('.navbar-default .navbar-nav > li > a').css({"color":"white"});
+           $("#mainNav").removeClass("navbar-shrink");
+    }
+  });
+
+
+
+
+
+// (function($) {
+//     "use strict"; // Start of use strict
+  
+
+
+    // Smooth scrolling using jQuery easing
+    // $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
+    //   if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+    //     var target = $(this.hash);
+    //     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+    //     if (target.length) {
+    //       $('html, body').animate({
+    //         scrollTop: (target.offset().top - 48)
+    //       }, 1000, "easeInOutExpo");
+    //       return false;
+    //     }
+    //   }
+    // });
 
     
     // // Closes responsive menu when a scroll trigger link is clicked
@@ -23,14 +71,14 @@
   
    
   
-    // Collapse the navbar when page is scrolled
-    $(window).scroll(function() {
-      if ($("#mainNav").offset().top > 100) {
-        $("#mainNav").addClass("navbar-shrink");
-      } else {
-        $("#mainNav").removeClass("navbar-shrink");
-      }
-    });
+    //Collapse the navbar when page is scrolled
+    // $(window).scroll(function() {
+    //   if ($("#mainNav").offset().top > 100) {
+    //     $("#mainNav").addClass("navbar-shrink");
+    //   } else {
+    //     $("#mainNav").removeClass("navbar-shrink");
+    //   }
+    // });
   
   //  // Scroll reveal calls
   // window.sr = ScrollReveal();
@@ -64,31 +112,8 @@
   //     tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
    // }
   // });
-  $(document).ready(function(){
-    // Activate Carousel
-    $("#my-car").carousel();
-    
-    // Enable Carousel Indicators
-    $(".item1").click(function(){
-        $("#my-car").carousel(0);
-    });
-    $(".item2").click(function(){
-        $("#my-car").carousel(1);
-    });
-    $(".item3").click(function(){
-        $("#my-car").carousel(2);
-    });
-    $(".item4").click(function(){
-        $("#my-car").carousel(3);
-    });
-    
-    // Enable Carousel Controls
-    $(".left").click(function(){
-        $("#my-car").carousel("prev");
-    });
-    $(".right").click(function(){
-        $("#my-car").carousel("next");
-    });
-});
 
-  })(jQuery); // End of use strict
+
+
+
+//   })(jQuery); // End of use strict
