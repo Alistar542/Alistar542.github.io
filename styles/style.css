@@ -246,7 +246,7 @@ body {
         background-color:	white;
         color: #ffffff;
         height: 100vh;
-        background-image: url("../images/header.jpg");
+        background-image: url("../images/header-1.jpg");
         background-size: cover;
         /* background-attachment: fixed; */
         
@@ -258,7 +258,7 @@ body {
         background-color:#0066ff;
         color: #ffffff;
         height: 40%;
-        background-image: url("../images/qoute.jpg");
+        background-image: url("../images/qoute-1.jpg");
         background-attachment: fixed;
         background-size: cover;
     }
