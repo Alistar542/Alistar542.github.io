@@ -27,19 +27,45 @@ $(window).scroll(function() {
     if ($("#mainNav").offset().top > 50) {
            $('.navbar-default').css({"background-color":"white","transition-duration":"0.2s"});
            $('#mainNav').css({"color":"#524758"});
-           $('.navbar-default .navbar-brand').css({"color":"#3378EC"});
+           $('.navbar-default .navbar-brand').css({"color":"#3378EC","font-size":"20px"});
            $("#mainNav").addClass("navbar-shrink");
            $('.navbar-default .navbar-nav > li > a').css({"color":"black"});
-          //  $('.navbar-default .navbar-nav > li > btn:hover').css({"color":"white"})
+           $('.navbar-default .navbar-nav > li > a:hover').css({"color":"white"});
     } else {
            $('.navbar-default').css({"background-color":"transparent","border-color":"transparent"});
            $('#mainNav').css({"color":"white"});
-           $('.navbar-default .navbar-brand').css({"color":"white"});
+           $('.navbar-default .navbar-brand').css({"color":"white","font-size":"18px"});
            $('.navbar-default .navbar-nav > li > a').css({"color":"white"});
            $("#mainNav").removeClass("navbar-shrink");
     }
   });
 
+  $(document).ready(function(){
+    // Add scrollspy to <body>
+    $('body').scrollspy({target: ".navbar", offset: 50});   
+  
+    // Add smooth scrolling on all links inside the navbar
+    $("#page-top a").on('click', function(event) {
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+  
+        // Store hash
+        var hash = this.hash;
+  
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function(){
+     
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+      }  // End if
+    });
+  });
 
 
 
