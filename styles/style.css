@@ -34,8 +34,8 @@ body {
 
 .button1:hover{
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    background-color: aqua;
     text-decoration: none;
+    color: white;
 }
 .btn.btn-outline {
     background-color: transparent;
@@ -256,6 +256,28 @@ body {
         
     }
 
+.header-content{
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 50px;
+    /* color: rgba(255, 255, 255, 0.7); */
+    margin-left: 50px;
+    margin-right: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: white;
+}
+
+.header-main{
+    text-transform: uppercase;
+}
+
+
+hr {
+    max-width: 50px;
+    border-width: 3px;
+    border-color: white; }
+
     .bg-2 {
         background-color:#0066ff;
         color: #ffffff;
@@ -366,9 +388,14 @@ body {
         padding-top: 0px;
         font-size: 150%;
     }
-   
-
-    
+   .header-content{
+    font-size: 18px;
+    max-width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+   }
 }
 
 
